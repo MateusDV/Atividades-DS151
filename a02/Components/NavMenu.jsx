@@ -15,7 +15,7 @@ export default function NavMenu(props) {
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: '#007bff',
+        backgroundColor: '#2F8D1E',
         paddingHorizontal: 16,
         paddingVertical: 8,
         borderRadius: 4,
