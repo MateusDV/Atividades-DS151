@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity } from 'react-native';
 
-const MyForm = () => {
+const Media = () => {
   const [nota1, setNota1] = useState('');
   const [nota2, setNota2] = useState('');
   const [media, setMedia] = useState('');
@@ -29,14 +29,14 @@ const MyForm = () => {
       <TouchableOpacity 
         style={styles.button}
         onPress={calcularMedia}>
-        <Text style={styles.buttonText}>Calcular Média</Text>
+          <Text style={styles.buttonText}>Calcular Média</Text>
       </TouchableOpacity>
       {media ? <Text>A média do aluno é {media}</Text> : null}
     </>
   );
 }
 
-export default MyForm;
+export default Media;
 
 const styles = StyleSheet.create({
   textbox: {
