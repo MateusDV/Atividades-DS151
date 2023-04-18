@@ -15,6 +15,11 @@ function Home(props) {
         onPress={() => props.navigate('imc')}>
         <Text style={styles.buttonText}>Calcular IMC</Text>
       </TouchableOpacity>
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => props.navigate('imagens')}>
+        <Text style={styles.buttonText}>Imagens</Text>
+      </TouchableOpacity>
     </>
   );
 }
