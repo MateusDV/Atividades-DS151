@@ -20,6 +20,11 @@ function Home(props) {
         onPress={() => props.navigate('imagens')}>
         <Text style={styles.buttonText}>Imagens</Text>
       </TouchableOpacity>
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => props.navigate('paises')}>
+        <Text style={styles.buttonText}>Paises</Text>
+      </TouchableOpacity>
     </>
   );
 }

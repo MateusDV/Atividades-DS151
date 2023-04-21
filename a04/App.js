@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Media from './Forms/Media';
 import IMC from './Forms/IMC';
-import NavMenu from './Components/NavMenu';
 import Home from './Forms/Home';
+import Paises from './Forms/Paises'
+import NavMenu from './Components/NavMenu';
+
 import Imagens from './Forms/Imagens';
 
 export default function App() {
@@ -20,6 +22,7 @@ export default function App() {
       {currentScreen === 'media' ? <Media /> : null }
       {currentScreen === 'imc' ? <IMC /> : null }
       {currentScreen === 'imagens' ? <Imagens /> : null }
+      {currentScreen === 'paises' ? <Paises /> : null }
     </View>
   );
 }
