@@ -7,32 +7,43 @@ import Paises from './Forms/Paises'
 import NavMenu from './Components/NavMenu';
 
 import Imagens from './Forms/Imagens';
+import LoginScreen from './Forms/LoginScreen';
 
 export default function App() {
-  const [currentScreen, setCurrentScreen] = useState('home');
+	const [currentScreen, setCurrentScreen] = useState('home');
+	const [userIsAuthenticated, setUserIsAuthenticated] = useState(false);
 
-  const navigate = (screen) => {
-    setCurrentScreen(screen);
-  };
+	const navigate = (screen) => {
+		setCurrentScreen(screen);
+	};
 
-  return (
-    <View style={styles.container}>
-       <NavMenu navigate={navigate} />
-      {currentScreen === 'home' ? <Home navigate={navigate} /> : null }
-      {currentScreen === 'media' ? <Media /> : null }
-      {currentScreen === 'imc' ? <IMC /> : null }
-      {currentScreen === 'imagens' ? <Imagens /> : null }
-      {currentScreen === 'paises' ? <Paises /> : null }
-    </View>
-  );
+	const authenticate = (isAuthenticated) => {
+		setUserIsAuthenticated(isAuthenticated);
+	};
+
+	const checkAuthentication = () => {
+		return userIsAuthenticated;
+	}
+
+	return (
+		<View style={styles.container}>
+			<NavMenu navigate={navigate} />
+			{currentScreen === 'home' ? <Home navigate={navigate} /> : null}
+			{currentScreen === 'media' ? <Media /> : null}
+			{currentScreen === 'imc' ? <IMC /> : null}
+			{currentScreen === 'imagens' ? <Imagens nav={navigate} auth={checkAuthentication} /> : null}
+			{currentScreen === 'paises' ? <Paises /> : null}
+			{currentScreen === 'login' ? <LoginScreen authenticate={authenticate} navigate={navigate} /> : null}
+		</View>
+	);
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+	container: {
+		flex: 1,
+		backgroundColor: '#fff',
+		alignItems: 'center',
+		justifyContent: 'center',
+	},
 });
 
