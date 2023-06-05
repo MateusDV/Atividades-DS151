@@ -25,6 +25,11 @@ function Home(props) {
         onPress={() => props.navigate('paises')}>
         <Text style={styles.buttonText}>Paises</Text>
       </TouchableOpacity>
+      <TouchableOpacity 
+        style={styles.button}
+        onPress={() => props.navigate('alunos')}>
+        <Text style={styles.buttonText}>Alunos</Text>
+      </TouchableOpacity>
     </>
   );
 }

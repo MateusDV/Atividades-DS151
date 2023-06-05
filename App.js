@@ -4,6 +4,7 @@ import Media from './Forms/Media';
 import IMC from './Forms/IMC';
 import Home from './Forms/Home';
 import Paises from './Forms/Paises'
+import Alunos from './Forms/Alunos';
 import NavMenu from './Components/NavMenu';
 
 import Imagens from './Forms/Imagens';
@@ -34,6 +35,7 @@ export default function App() {
 			{currentScreen === 'imagens' ? <Imagens nav={navigate} auth={checkAuthentication} /> : null}
 			{currentScreen === 'paises' ? <Paises /> : null}
 			{currentScreen === 'login' ? <LoginScreen authenticate={authenticate} navigate={navigate} /> : null}
+			{currentScreen === 'alunos' ? <Alunos /> : null}
 		</View>
 	);
 }
